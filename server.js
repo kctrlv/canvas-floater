@@ -9,6 +9,8 @@ app.get('/', function (req, res){
 });
 
 var server = http.createServer(app);
+const socketIo = require('socket.io');
+const io = socketIo(server);
 
 var port = process.env.PORT || 2115;
 
